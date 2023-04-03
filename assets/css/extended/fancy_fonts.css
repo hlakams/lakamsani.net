@@ -3,7 +3,7 @@
     /* font-style: normal;
     font-weight: 400; */
     src: url('/fonts/Caveat-VariableFont_wght.ttf') format('truetype');
-    font-display: fallback;
+    font-display: swap;
 }
 
 h1, a.fancy {
