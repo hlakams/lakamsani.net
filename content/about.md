@@ -7,4 +7,4 @@ url: "/about/"
 math: true
 ---
 
-I'm a Senior at Arizona State studying Computer Science and Math. In my free time, I enjoy writing about the music I'm listening to [(check out what I'm listening to on LastFM!)](https://www.last.fm/user/batouttahellcat) and watching basketball games---go Suns! $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
+I'm a Senior at Arizona State studying Computer Science and Math. In my free time, I enjoy writing about the music I'm listening to [(check out what I'm listening to on LastFM!)](https://www.last.fm/user/batouttahellcat) and watching basketball games---go Suns!
