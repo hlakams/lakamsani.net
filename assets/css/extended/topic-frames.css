@@ -1,0 +1,42 @@
+.post-info-frame {
+    background-color: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    padding: 1rem 2rem;
+    margin: 3rem 0;
+
+    font-size: 16px;
+}
+
+.post-info-frame h2, .post-info-frame h3, .post-info-frame h4 {
+    font-weight: 400;
+}
+.post-info-frame h3 {
+    margin-top: 3rem;
+}
+
+.post-info-frame ul {
+    padding-inline-start: 0;
+    margin-top: 1.5rem;
+}
+.post-info-frame li {
+    list-style-type: none;
+}
+
+.post-info-frame h4 {
+    margin: 1rem 0 0 0;
+}
+.post-info-frame h4 a {
+    font-size: 18px;
+    box-shadow: none;
+}
+.post-info-frame h4 a:hover {
+    text-decoration: underline;
+}
+
+.post-info-frame figure {
+    float: right;
+    width: 100%;
+    max-width: 360px;
+}

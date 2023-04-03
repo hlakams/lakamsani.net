@@ -1,0 +1,21 @@
+:root {
+  --main-width: 960px;
+  --link-color: var(--primary);
+  --link-hover-color: #007bff;
+  --link-underline-shadow: 0 1px 0 var(--link-color);
+  --link-hover-underline-color: #007bff;
+  --link-hover-underline-shadow: 0 2px 0 var(--link-hover-underline-color);
+  --link-background-color: #e1f0ff;
+}
+
+@media screen and (min-width: 1400px) {
+  /* Bit more size on larger screens */
+  :root {
+    --post-width: 960px;
+  }
+}
+
+.dark {
+  --signature: #c3def9;
+  --link-hover-color: #c3def9;
+}

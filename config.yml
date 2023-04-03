@@ -1,0 +1,133 @@
+baseURL: "https://lakamsani.net/"
+title: Harsha Lakamsani
+paginate: 5
+theme: PaperModX
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# googleAnalytics: UA-123-45
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    title: Harsha Lakamsani
+    description: "Thoughts and musings on the finer things in life, all on my personal website."
+    keywords: [Blog, Portfolio, PaperModX]
+    author: Me
+    # author: ["Me", "You"] # multiple authors
+    images: ["<link or path of image for opengraph, twitter-cards>"]
+    DateFormat: "January 2, 2006"
+    defaultTheme: dark # dark, light
+    disableThemeToggle: false
+
+    ShowReadingTime: false
+    ShowShareButtons: false
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    disableSpecial1stPost: false
+    disableScrollToTop: true
+    comments: false
+    hidemeta: false
+    hideSummary: false
+    showtoc: false
+    tocopen: false
+
+    themeColor: "orange"
+
+    assets:
+        disableHLJS: true # to disable highlight.js
+        disableFingerprinting: true
+        favicon: "/static/favicon.ico"
+        favicon16x16: "/static/favicon-16x16.png"
+        favicon32x32: "/static/favicon-32x32.png"
+        apple_touch_icon: "/static/apple-touch-icon.png"
+        safari_pinned_tab: "/static/safari-pinned-tab.svg"
+
+    label:
+        text: "Home"
+        icon: "/static/android-chrome-512x512.png"
+        iconHeight: 35
+
+    # profile-mode
+    profileMode:
+        enabled: true # needs to be explicitly set
+        title: Harsha Lakamsani
+        subtitle: "Writing here and there \U0001FA90"
+        imageUrl: "https://www.gravatar.com/avatar/b18084ebbcb044f4780419bb0ccb5dd1.jpg?s=180"
+        imageWidth: 180
+        imageHeight: 180
+        imageTitle: I'm here!
+        buttons:
+            - name: Posts
+              url: posts
+            - name: Tags
+              url: tags
+
+    # home-info mode
+    homeInfoParams:
+        Title: "Reporting live from the gutter \U0001F52E"
+        Content: Welcome to my website's landing page!
+
+    socialIcons:
+        - name: linkedin-simple
+          url: "https://linkedin.com/in/hlakams"
+        - name: github-simple
+          url: "https://github.com/hlakams"
+        - name: gmail
+          url: "mailto:hlakamsani+website@gmail.com"
+
+    cover:
+        hidden: true # hide everywhere but not in structured data
+        hiddenInList: true # hide on list pages and home
+        hiddenInSingle: true # hide on single page
+
+    editPost:
+        URL: "https://github.com/<path_to_repo>/content"
+        Text: "Suggest Changes" # edit text
+        appendFilePath: true # to append file path to Edit link
+
+    # for search
+    # https://fusejs.io/api/options.html
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+menu:
+    main:
+        - identifier: me
+          name: about me
+          url: /about
+          weight: 20
+        - identifier: categories
+          name: categories
+          url: /categories/
+          weight: 10
+        - identifier: tags
+          name: tags
+          url: /tags/
+          weight: 20
+        - identifier: website
+          name: lakamsani.net
+          url: https://lakamsani.net
+          weight: 30
+
+# Read: https://github.com/reorx/hugo-PaperModX/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+    highlight:
+        # anchorLineNos: true
+        codeFences: true
+        guessSyntax: true
+        lineNos: true
+        style: monokai
