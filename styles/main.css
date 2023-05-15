@@ -24,6 +24,7 @@ body {
   font-variation-settings: 'wght' 450;
   font-variant: common-ligatures contextual;
   letter-spacing: -0.02em;
+  background-color: #18181a;
 }
 b,
 strong,
@@ -35,6 +36,8 @@ h6 {
 }
 h1 {
   font-variation-settings: 'wght' 850;
+  /* font-size: 1.5em !important; */
+  /* color:#945af1 !important; */
 }
 h2 {
   font-variation-settings: 'wght' 750;
@@ -57,7 +60,16 @@ img.next-image {
 }
 
 .prose a {
-  color: #0074de;
+  color: #945af1;
+  transition: opacity .2s ease;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
+a:hover {
+	opacity: .7;
 }
 
 .nav-line .nav-link {
