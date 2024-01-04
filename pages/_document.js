@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   const meta = {
-    title: "Harsha's Website @ lakamsani.net",
+    title: "Harsha Lakamsani",
     description: "Musings on whatever crosses my mind.",
     image: "https://i.ibb.co/5KTQSQG/output.jpg",
   };
