@@ -35,9 +35,14 @@ h6 {
   font-variation-settings: 'wght' 650;
 }
 h1 {
-  font-variation-settings: 'wght' 850;
+  font-variation-settings: 'wght' 250;
   /* font-size: 1.5em !important; */
   /* color:#945af1 !important; */
+  background: #A18BCF;
+  background: radial-gradient(circle farthest-side at bottom left, #A18BCF 0%, #8E2ECF 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 h2 {
   font-variation-settings: 'wght' 750;
