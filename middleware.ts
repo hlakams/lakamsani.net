@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
+let robotsTXTCall: Promise<any>, agentAnalyticsCall: Promise<any>;
+
 export async function middleware(req: NextRequest) {
     if (req.nextUrl.pathname.match('/((?!api|_next/static|_next/image|favicon.ico).*)')) {
         await sendAgentAnalytics(req);
@@ -22,7 +24,7 @@ export async function middleware(req: NextRequest) {
 
 async function sendAgentAnalytics(req: NextRequest): Promise<any> {
     const url = 'https://api.darkvisitors.com/robots-txts';
-    const agentAnalyticsCall = fetch(url, {
+    agentAnalyticsCall = fetch(url, {
         method: 'POST',
         headers: {
             "Authorization": "Bearer " + process.env.DARK_VISITORS_API_KEY,
@@ -38,7 +40,7 @@ async function sendAgentAnalytics(req: NextRequest): Promise<any> {
 
 async function getRobotsTXT(): Promise<any> {
     const url = 'https://api.darkvisitors.com/robots-txts';
-    const robotsTXTCall = fetch(url, {
+    robotsTXTCall = fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
