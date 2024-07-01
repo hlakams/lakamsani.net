@@ -1,11 +1,15 @@
-// const withNextra = require('nextra')
-nextra_reqs = require('nextra')({
-    theme:'nextra-theme-blog',
-    themeConfig:'./theme.config.js',
-    latex:true
+const withNextra = require('nextra')({
+  theme: 'nextra-theme-blog',
+  themeConfig: './theme.config.jsx'
 })
 
 next_config = {
+  webpack: (config) => {
+    // need topLevelAwait for middleware + layers for manipulating calls
+    config.experiments = {topLevelAwait: true, layers: true};
+    return config;
+  },
+  // allow CORS for photo embeds
   images: {
     remotePatterns: [
       {
@@ -20,4 +24,4 @@ next_config = {
   },
 }
 
-module.exports = nextra_reqs(next_config)
+module.exports = withNextra(next_config)
