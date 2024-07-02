@@ -4,9 +4,17 @@ const withNextra = require('nextra')({
 })
 
 next_config = {
+  experimental: {
+    serverComponentsExternalPackages: [
+      'sharp'
+    ]
+  },
   webpack: (config) => {
     // need topLevelAwait for middleware + layers for manipulating calls
-    config.experiments = {topLevelAwait: true, layers: true};
+    config.experiments = {
+      topLevelAwait: true,
+      layers: true
+    };
     return config;
   },
   // allow CORS for photo embeds
