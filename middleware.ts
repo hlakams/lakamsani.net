@@ -1,6 +1,8 @@
+// Next.js middleware (for context, this is used in a Nextra blog project)
 import { NextRequest, NextResponse } from 'next/server';
 const fs = require("fs");
 
+// forwards declaration for call var caching
 let robotsTXTCall: Promise<any>, modifiedRobotsTXTData: string;
 
 export async function middleware(req: NextRequest) {
