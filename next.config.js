@@ -4,11 +4,7 @@ const withNextra = require('nextra')({
 })
 
 next_config = {
-  experimental: {
-    serverComponentsExternalPackages: [
-      'sharp'
-    ]
-  },
+  swcMinify: true,
   webpack: (config) => {
     // need topLevelAwait for middleware + layers for manipulating calls
     config.experiments = {
@@ -19,6 +15,8 @@ next_config = {
   },
   // allow CORS for photo embeds
   images: {
+    loader: 'custom',
+    loaderFile: './lib/imageLoader.ts',
     remotePatterns: [
       {
           protocol: 'https',

@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# cloudflare testing
+/.wrangler
+
 # production
 /build
 

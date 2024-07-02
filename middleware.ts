@@ -2,6 +2,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 const fs = require("fs");
 
+export const runtime="experimental-edge"
+
 // forwards declaration for call var caching
 let robotsTXTCall: Promise<any>, modifiedRobotsTXTData: string;
 
@@ -53,11 +55,10 @@ export async function middleware(req: NextRequest) {
     }
 }
 
-// note: do not cache fetch since it is unique for each path hit
+// note: caching removed as part of cloudflare pages compatibility
 async function sendAgentAnalytics(req: NextRequest): Promise<any> {
     const url = 'https://api.darkvisitors.com/robots-txts';
     const agentAnalyticsCall = fetch(url, {
-        cache: 'no-store',
         method: 'POST',
         headers: {
             "Authorization": "Bearer " + process.env.DARK_VISITORS_API_KEY,
