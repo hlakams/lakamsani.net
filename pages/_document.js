@@ -1,5 +1,7 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
+export const runtime="edge"
+
 export default function Document() {
   const meta = {
     title: "Harsha Lakamsani",

@@ -2,6 +2,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 const fs = require("fs");
 
+export const runtime="edge"
+
 // forwards declaration for call var caching
 let robotsTXTCall: Promise<any>, modifiedRobotsTXTData: string;
 

@@ -4,11 +4,8 @@ const withNextra = require('nextra')({
 })
 
 next_config = {
-  experimental: {
-    serverComponentsExternalPackages: [
-      'sharp'
-    ]
-  },
+  output: 'export',
+  swcMinify: true,
   webpack: (config) => {
     // need topLevelAwait for middleware + layers for manipulating calls
     config.experiments = {
@@ -19,6 +16,7 @@ next_config = {
   },
   // allow CORS for photo embeds
   images: {
+    // unoptimized: true,
     remotePatterns: [
       {
           protocol: 'https',
@@ -32,4 +30,5 @@ next_config = {
   },
 }
 
+export const runtime="edge"
 module.exports = withNextra(next_config)
