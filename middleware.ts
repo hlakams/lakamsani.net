@@ -57,6 +57,7 @@ export async function middleware(req: NextRequest) {
 async function sendAgentAnalytics(req: NextRequest): Promise<any> {
     const url = 'https://api.darkvisitors.com/robots-txts';
     const agentAnalyticsCall = fetch(url, {
+        cache: 'no-cache',
         method: 'POST',
         headers: {
             "Authorization": "Bearer " + process.env.DARK_VISITORS_API_KEY,
@@ -74,6 +75,9 @@ async function sendAgentAnalytics(req: NextRequest): Promise<any> {
 async function getRobotsTXT(): Promise<any> {
     const url = 'https://api.darkvisitors.com/robots-txts';
     robotsTXTCall = fetch(url, {
+        next: {
+            revalidate: 43200
+        },
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
