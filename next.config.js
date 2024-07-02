@@ -4,13 +4,12 @@ const withNextra = require('nextra')({
 })
 
 next_config = {
+  swcMinify: true,
   webpack: (config) => {
     // need topLevelAwait for middleware + layers for manipulating calls
-    swcMinify: true,
     config.experiments = {
       topLevelAwait: true,
-      layers: true,
-      runtime: 'experimental-edge'
+      layers: true
     };
     return config;
   },
