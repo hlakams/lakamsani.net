@@ -3,7 +3,7 @@ const path = require('path')
 const RSS = require('rss')
 const matter = require('gray-matter')
 
-export const runtime="edge"
+export const runtime="experimental-edge"
 
 async function generate() {
   const feed = new RSS({
