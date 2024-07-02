@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Inter var';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: block;
+  src: url(/fonts/Inter-roman.latin.var.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Inter var';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: block;
+  src: url(/fonts/Inter-italic.latin.var.woff2) format('woff2');
+  font-named-instance: 'Italic';
+}
+
+body {
+  font-family: 'Inter var', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-feature-settings: 'case' 1, 'cpsp' 1, 'dlig' 1, 'cv01' 1, 'cv02',
+    'cv03' 1, 'cv04' 1;
+  font-variation-settings: 'wght' 450;
+  font-variant: common-ligatures contextual;
+  letter-spacing: -0.02em;
+  background-color: #18181a;
+}
+b,
+strong,
+h3,
+h4,
+h5,
+h6 {
+  font-variation-settings: 'wght' 650;
+}
+h1 {
+  font-variation-settings: 'wght' 250;
+  line-height: 1.25 !important;
+  /* font-size: 1.5em !important; */
+  /* color:#945af1 !important; */
+  background: #A18BCF;
+  background: radial-gradient(circle farthest-side at bottom left, #A18BCF 0%, #8E2ECF 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0 !important;
+}
+h2 {
+  font-variation-settings: 'wght' 750;
+}
+
+@media screen and (min-device-pixel-ratio: 1.5),
+  screen and (min-resolution: 1.5dppx) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+details summary {
+  cursor: pointer;
+}
+
+img.next-image {
+  margin: 0;
+}
+
+.prose a {
+  color: #945af1;
+  transition: opacity .2s ease;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
+a:hover {
+	opacity: .7;
+}
+
+.nav-line .nav-link {
+  color: #69778c;
+}
