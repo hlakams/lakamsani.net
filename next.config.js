@@ -15,8 +15,6 @@ next_config = {
   },
   // allow CORS for photo embeds
   images: {
-    loader: 'custom',
-    loaderFile: './lib/imageLoader.ts',
     remotePatterns: [
       {
           protocol: 'https',
