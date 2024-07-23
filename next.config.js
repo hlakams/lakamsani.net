@@ -4,28 +4,8 @@ const withNextra = require('nextra')({
 })
 
 next_config = {
-  swcMinify: true,
-  webpack: (config) => {
-    // need topLevelAwait for middleware + layers for manipulating calls
-    config.experiments = {
-      topLevelAwait: true,
-      layers: true
-    };
-    return config;
-  },
-  // allow CORS for photo embeds
-  images: {
-    remotePatterns: [
-      {
-          protocol: 'https',
-          hostname: 'i.ibb.co',
-      },
-      {
-          protocol: 'https',
-          hostname: 'www.gravatar.com' 
-      }
-    ]
-  },
+  // faster (experimental) minifier!
+  swcMinify: true
 }
 
 module.exports = withNextra(next_config)

@@ -4,7 +4,7 @@ export default function Document() {
   const meta = {
     title: "Harsha Lakamsani",
     description: "Musings on whatever crosses my mind.",
-    image: "https://i.ibb.co/5KTQSQG/output.jpg",
+    image: "/images/opengraph-preview.jpg",
   };
 
   return (
