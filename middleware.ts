@@ -5,29 +5,8 @@ const fs = require("fs");
 // forwards declaration for call var caching
 let robotsTXTCall: Promise<any>, modifiedRobotsTXTData: string;
 
-export async function middleware(req: NextRequest) {
-    // optionally remove analytics exposure for site resources
-    /*
-    Pathname matches start with:
-    /api
-    /_next/static
-    /_next/image
-    /favicon.ico
-    */
-    // if (req.nextUrl.pathname.match("^(?!/(api|_next/[static|image]|favicon\.ico))")) {
-    //     await sendAgentAnalytics(req);
-    // }
-
-    // I prefer analytics on all paths
-    try {
-        await sendAgentAnalytics(req);
-    } catch (e) {
-        // if this fails, do not serve data
-        console.log(e);
-        throw new Error(e);
-    }
-        
-    // also generate the robots.txt if not cached
+export async function middleware(req: NextRequest) {      
+    // generate the robots.txt if not cached
     if (req.nextUrl.pathname.startsWith('/robots.txt')) {
         const headers = new Headers();
         headers.set("Content-Type", "text/plain");
@@ -51,24 +30,6 @@ export async function middleware(req: NextRequest) {
             }
         );
     }
-}
-
-// note: caching removed as part of cloudflare pages compatibility
-async function sendAgentAnalytics(req: NextRequest): Promise<any> {
-    const url = 'https://api.darkvisitors.com/robots-txts';
-    const agentAnalyticsCall = fetch(url, {
-        cache: 'no-cache',
-        method: 'POST',
-        headers: {
-            "Authorization": "Bearer " + process.env.DARK_VISITORS_API_KEY,
-        },
-        body: JSON.stringify({
-            request_path: req.nextUrl.pathname,
-            request_method: req.method,
-            request_headers: req.headers
-        })
-    })
-    return agentAnalyticsCall
 }
 
 // note: this response needs to be cached!
