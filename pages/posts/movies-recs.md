@@ -18,7 +18,7 @@ Though I used to hear the eerie hoots of brooding owls and transient meows of pr
 I hope you enjoy them!
 
 ### Great late at night or on rainy days
-I first saw these movies while seated in a similar ambiance and it definitely adds to the experience!
+I first saw these movies while seated in similar ambiance and it definitely adds to the experience!
 - _A River Runs Through It_ (Robert Redford, 1992)
 - _After Hours_ (Martin Scorcese, 1985)
 - _Alien_ (Ridley Scott, 1979)
