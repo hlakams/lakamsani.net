@@ -62,7 +62,6 @@ Carrying a central theme of love surrounded by variety in flavor.
 - _Bombay_ (Mani Ratnam, 1995)
 - _Chungking Express_ (Wong Kar-wai, 1994)
 - _Fallen Angels_ (Wong Kar-wai, 1995)
-- 
 - _Klute_ (Alan J. Pakula, 1971)
 - _Lady Bird_ (Greta Gerwig, 2017)
 - _Lost in Translation_ (Sofia Coppola, 2003)
